@@ -16,6 +16,7 @@ class Controller
     {
         extract($this->vars);
         ob_start();
+
         $view = str_replace('Controller', '', get_class($this));
         $view = str_replace('mvc\s', '', $view);
         $view = str_replace("\\", '', $view);
